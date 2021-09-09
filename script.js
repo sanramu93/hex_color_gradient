@@ -5,7 +5,10 @@ const colorInfo1 = document.querySelector(".c1");
 const colorInfo2 = document.querySelector(".c2");
 
 const rdmHEX = () =>
-  (Math.trunc(Math.random() * 255) + 1).toString(16).toUpperCase();
+  (Math.trunc(Math.random() * 255) + 1)
+    .toString(16)
+    .padStart(2, "0")
+    .toUpperCase();
 
 const rdmColor = function () {
   const [hex1, hex2, hex3] = [rdmHEX(), rdmHEX(), rdmHEX()];
